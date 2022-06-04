@@ -7,7 +7,6 @@ function Form() {
       author: '',
     },
   });
-
   const handleChange = (e) => {
     const { name, value } = e.target;
     setState({ ...state, [name]: value });
