@@ -3,14 +3,14 @@ import React, { useState } from 'react';
 function Form() {
   const [state, setState] = useState({
     state: {
-      author: '',
       title: '',
+      author: '',
     },
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setState({ [name]: value });
+    setState({ ...state, [name]: value });
   };
 
   const handleSubmit = (e) => {
@@ -19,8 +19,8 @@ function Form() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" placeholder="Title" name="title" onChange={handleChange} value={state.title} />
-      <input type="text" placeholder="Author.." name="author" onChange={handleChange} value={state.author} />
+      <input type="text" placeholder="Title" name="title" onChange={handleChange} value={state.title || ''} />
+      <input type="text" placeholder="Author.." name="author" onChange={handleChange} value={state.author || ''} />
       <button type="submit">ADD</button>
     </form>
   );
