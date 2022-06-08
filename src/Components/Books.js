@@ -1,12 +1,9 @@
+import { useSelector } from 'react-redux';
 import Book from './Book';
 import Form from './Form';
 
 function Books() {
-  const data = [
-    { id: 1, title: 'Hamlet', author: 'William Shakespear' },
-    { id: 2, title: 'Romeo and Julliet', author: 'William Shakespear' },
-    { id: 3, title: 'Silver spoon', author: 'William Shakespear' },
-  ];
+  const data = useSelector((state) => state);
 
   return (
     <div>
