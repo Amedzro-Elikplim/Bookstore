@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { ADD } from '../redux/books/actions';
 
 function Form() {
+  const dispatch = useDispatch();
+
   const [state, setState] = useState({
     state: {
       title: '',
@@ -14,6 +18,11 @@ function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const dataObj = {
+      title: state.title,
+      author: state.author,
+    };
+    dispatch(ADD(dataObj));
   };
 
   return (
