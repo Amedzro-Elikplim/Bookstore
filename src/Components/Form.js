@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { ADD } from '../redux/books/actions';
@@ -21,6 +22,7 @@ function Form() {
     const dataObj = {
       title: state.title,
       author: state.author,
+      id: uuidv4(),
     };
     dispatch(ADD(dataObj));
   };
