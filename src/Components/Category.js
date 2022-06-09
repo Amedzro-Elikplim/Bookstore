@@ -1,12 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { STATUS } from '../redux/books/actions';
 
 function Category() {
-  const [state, setState] = useState('');
+  const dispatch = useDispatch();
+  const data = useSelector((state) => state.category);
+
+  const displayText = () => {
+    dispatch(STATUS('Under construction'));
+  };
 
   return (
     <div>
-      <div>{state}</div>
-      <button type="button" onClick={() => setState('Under Construction')}>Check status</button>
+      <div>{data}</div>
+      <button type="button" onClick={displayText}>Check status</button>
     </div>
   );
 }
