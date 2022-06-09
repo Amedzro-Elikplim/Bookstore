@@ -2,7 +2,7 @@
 
 # Book Store
 
-> Math magicians is a website for all fans of mathematics. It is a Single Page App that allows users to make simple calculations and read a random math-related quote.
+> Book store is a website that helps a user to track the books he/she is reading and update the books read.
 
 Additional description about the project and its features.
 ## Built With
