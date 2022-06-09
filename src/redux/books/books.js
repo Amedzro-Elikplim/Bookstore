@@ -1,4 +1,8 @@
-const initialState = [];
+const initialState = [
+  { id: '1', title: 'Hamlet', author: 'William Shakespear' },
+  { id: '2', title: 'Romeo and Julliet', author: 'William Shakespear' },
+  { id: '3', title: 'Silver spoon', author: 'Peggy Oppong' },
+];
 
 const bookReducer = (state = initialState, action) => {
   switch (action.type) {
