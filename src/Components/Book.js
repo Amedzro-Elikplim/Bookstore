@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import { Pie } from '@brightlayer-ui/react-progress-icons';
 import { REMOVEBOOK } from '../redux/books/actions';
 import '../styles/book.css';
 
@@ -44,12 +45,29 @@ function Book(props) {
         </div>
       </div>
 
-      <div>PROGRESS BAR</div>
+      <div className="d-flex">
+        <Pie
+          className="pie"
+          percent={75}
+          size={120}
+          color="rgb(115, 176, 255)"
+          ring={2}
+          showPercentLabel
+          labelColor="black"
+          backgroundColor="rgb(199, 199, 199)"
+        />
+        <div className="percentage d-flex">
+          <p className="percent">75%</p>
+          <p className="completed">Completed</p>
+        </div>
+      </div>
 
       <div className="current-chapter">
         <p className="current">CURRENT CHAPTER</p>
         <p className="chapter">Chapter 17</p>
-        <button type="button" className="update-button">UPDATE PROGRESS</button>
+        <button type="button" className="update-button">
+          UPDATE PROGRESS
+        </button>
       </div>
     </div>
   );
