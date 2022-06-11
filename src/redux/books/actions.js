@@ -24,10 +24,22 @@ export const FETCHBOOKS = () => async (dispatch) => {
   }
 };
 
-export const ADDBOOK = () => {
+export const ADDBOOK = (getState) => {
   try {
-    
+    const bookCount = getState().book.length - 1;
+    const bookAdded = getState().book[bookCount];
+
+    const response = fetch(BASEURL, {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify(bookAdded),
+    });
+
+    const result = await response.text();
+    alert(result);
   } catch (error) {
-    
+    console.log(error);
   }
-}
+};
