@@ -18,3 +18,9 @@
   color: gray;
   font-weight: bold;
 }
+
+.title {
+  margin-top: 5px;
+  font-size: 25px;
+  font-weight: bolder;
+}
