@@ -17,14 +17,22 @@ function Book(props) {
   return (
     <div className="book-container d-flex">
       <div>
-        <div className="d-flex spacing">
-          <p>{title}</p>
-          <p>{author}</p>
-          <p>{category}</p>
+        <div className="book-info">
+          <p className="category">{category}</p>
+          <p className="title">{title}</p>
+          <p className="author">{author}</p>
         </div>
         <button type="button" className="button" onClick={removeBook}>
           Remove
         </button>
+      </div>
+
+      <div>
+        second
+      </div>
+
+      <div>
+        third
       </div>
     </div>
   );
