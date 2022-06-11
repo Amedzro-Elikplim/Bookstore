@@ -14,7 +14,7 @@ export const FETCHBOOKS = () => async (dispatch) => {
     const books = await response.json();
     const info = Object.keys(books).map((key) => {
       const data = books[key][0];
-      data.id = key;
+      data.item_id = key;
       return data;
     });
 
@@ -24,12 +24,12 @@ export const FETCHBOOKS = () => async (dispatch) => {
   }
 };
 
-export const ADDBOOK = () => async (getState) => {
+export const SAVEBOOK = () => async (_dispatch, getState) => {
   try {
     const bookCount = getState().book.length - 1;
     const bookAdded = getState().book[bookCount];
 
-    const response = fetch(BASEURL, {
+    const response = await fetch(BASEURL, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
