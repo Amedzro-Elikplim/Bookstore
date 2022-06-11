@@ -23,11 +23,18 @@ function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const { title, author, category } = state;
+
+    if (title === '' || author === '' || category === '') {
+      alert('Fill all fields');
+      return;
+    }
+
     const dataObj = {
       item_id: uuidv4(),
-      title: state.title,
-      author: state.author,
-      category: state.category,
+      title,
+      author,
+      category,
     };
     dispatch(ADD(dataObj));
     resetState();
@@ -36,9 +43,27 @@ function Form() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input type="text" placeholder="Title" name="title" onChange={handleChange} value={state.title || ''} />
-      <input type="text" placeholder="Author.." name="author" onChange={handleChange} value={state.author || ''} />
-      <input type="text" placeholder="Category.." name="category" onChange={handleChange} value={state.category || ''} />
+      <input
+        type="text"
+        placeholder="Title"
+        name="title"
+        onChange={handleChange}
+        value={state.title || ''}
+      />
+      <input
+        type="text"
+        placeholder="Author.."
+        name="author"
+        onChange={handleChange}
+        value={state.author || ''}
+      />
+      <input
+        type="text"
+        placeholder="Category.."
+        name="category"
+        onChange={handleChange}
+        value={state.category || ''}
+      />
       <button type="submit">ADD</button>
     </form>
   );
