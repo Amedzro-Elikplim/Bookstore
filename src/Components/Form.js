@@ -1,32 +1,37 @@
 import { v4 as uuidv4 } from 'uuid';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { ADD } from '../redux/books/actions';
+import { ADD, SAVEBOOK } from '../redux/books/actions';
 
 function Form() {
   const dispatch = useDispatch();
+  const initialState = {
+    title: '',
+    author: '',
+    category: '',
+  };
 
-  const [state, setState] = useState({
-    state: {
-      title: '',
-      author: '',
-      category: '',
-    },
-  });
+  const [state, setState] = useState(initialState);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setState({ ...state, [name]: value });
   };
 
+  const resetState = () => {
+    setState({ ...initialState });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const dataObj = {
-      id: uuidv4(),
+      item_id: uuidv4(),
       title: state.title,
       author: state.author,
       category: state.category,
     };
     dispatch(ADD(dataObj));
+    resetState();
+    dispatch(SAVEBOOK());
   };
 
   return (
