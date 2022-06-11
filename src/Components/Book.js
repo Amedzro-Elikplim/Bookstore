@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { REMOVEBOOK } from '../redux/books/actions';
+import '../styles/book.css';
 
 function Book(props) {
   const dispatch = useDispatch();
-
   const {
     id, title, author, category,
   } = props;
@@ -16,14 +16,16 @@ function Book(props) {
 
   return (
     <div className="book-container d-flex">
-      <div className="d-flex spacing container">
-        <p>{title}</p>
-        <p>{author}</p>
-        <p>{category}</p>
+      <div>
+        <div className="d-flex spacing">
+          <p>{title}</p>
+          <p>{author}</p>
+          <p>{category}</p>
+        </div>
+        <button type="button" className="button" onClick={removeBook}>
+          Remove
+        </button>
       </div>
-      <button type="button" className="button" onClick={removeBook}>
-        Remove
-      </button>
     </div>
   );
 }
