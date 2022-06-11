@@ -1,0 +1,30 @@
+.form {
+    padding: 30px 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.input {
+  width: 30vw;
+  padding: 10px;
+  border: 1px solid rgb(214, 214, 214);
+  font-size: large;
+  outline: none;
+}
+
+.category-input {
+    width: 20vw;
+    padding: 15px;
+    font-size: large;
+    border: 1px solid rgb(214, 214, 214);
+    outline: none;
+}
+
+.add-button {
+    border: none;
+    color: white;
+    width: 15vw;
+    outline: none;
+    background-color: rgb(143, 177, 252);
+    padding: 10px 30px;
+}
