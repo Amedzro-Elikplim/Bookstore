@@ -1,7 +1,6 @@
 import BASEURL from '../../api.config';
 
 export const ADD = (book) => ({ type: 'ADD_BOOK', payload: book });
-export const REMOVE = (id) => ({ type: 'REMOVE_BOOK', payload: id });
 export const STATUS = (text) => ({ type: 'CHECK_STATUS', payload: text });
 export const DISPLAY_BOOKS = (books) => ({
   type: 'DISPLAY_BOOKS',
@@ -39,6 +38,22 @@ export const SAVEBOOK = () => async (_dispatch, getState) => {
 
     const result = await response.text();
     alert(result);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export const REMOVEBOOK = (id) => async (dispatch) => {
+  try {
+    const response = await fetch(`${BASEURL}/${id}`, {
+      method: 'DELETE',
+      body: JSON.stringify({ item_id: id }),
+    });
+
+    dispatch(await FETCHBOOKS());
+
+    const message = await response.text();
+    alert(message);
   } catch (error) {
     console.log(error);
   }
