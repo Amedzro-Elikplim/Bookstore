@@ -24,7 +24,7 @@ export const FETCHBOOKS = () => async (dispatch) => {
   }
 };
 
-export const ADDBOOK = (getState) => {
+export const ADDBOOK = () => async (getState) => {
   try {
     const bookCount = getState().book.length - 1;
     const bookAdded = getState().book[bookCount];
