@@ -1,0 +1,9 @@
+.nav {
+  padding: 20px;
+  width: 100vw;
+}
+
+.nav-links {
+  gap: 20px;
+  list-style-type: none;
+}
