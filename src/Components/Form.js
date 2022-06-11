@@ -10,6 +10,7 @@ function Form() {
     state: {
       title: '',
       author: '',
+      category: '',
     },
   });
   const handleChange = (e) => {
@@ -20,9 +21,10 @@ function Form() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const dataObj = {
+      id: uuidv4(),
       title: state.title,
       author: state.author,
-      id: uuidv4(),
+      category: state.category,
     };
     dispatch(ADD(dataObj));
   };
@@ -31,6 +33,7 @@ function Form() {
     <form onSubmit={handleSubmit}>
       <input type="text" placeholder="Title" name="title" onChange={handleChange} value={state.title || ''} />
       <input type="text" placeholder="Author.." name="author" onChange={handleChange} value={state.author || ''} />
+      <input type="text" placeholder="Category.." name="category" onChange={handleChange} value={state.category || ''} />
       <button type="submit">ADD</button>
     </form>
   );
