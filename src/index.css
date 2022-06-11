@@ -4,6 +4,10 @@
   font-family: Raleway, sans-serif;
 }
 
+body {
+  background-color: rgba(243, 243, 243, 0.822);
+}
+
 .d-flex {
   display: flex;
 }
