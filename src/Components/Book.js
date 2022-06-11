@@ -44,10 +44,12 @@ function Book(props) {
         </div>
       </div>
 
-      <div>second</div>
+      <div>PROGRESS BAR</div>
 
       <div className="current-chapter">
-        <button type="button">Update Progress</button>
+        <p className="current">CURRENT CHAPTER</p>
+        <p className="chapter">Chapter 17</p>
+        <button type="button" className="update-button">UPDATE PROGRESS</button>
       </div>
     </div>
   );
