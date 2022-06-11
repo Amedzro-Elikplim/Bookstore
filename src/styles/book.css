@@ -24,3 +24,8 @@
   font-size: 25px;
   font-weight: bolder;
 }
+
+.author {
+  font-size: smaller;
+  color: rgb(115, 176, 255);
+}
