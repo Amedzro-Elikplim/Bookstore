@@ -5,10 +5,12 @@
 }
 
 .nav {
-  padding: 40px;
+  padding: 35px;
   width: 100vw;
   background-color: white;
   align-items: center;
+  gap: 50px;
+  border: 1px solid rgb(214, 214, 214);
 }
 
 .logo {
