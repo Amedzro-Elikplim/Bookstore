@@ -1,6 +1,4 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
   font-family: Raleway, sans-serif;
 }
 
@@ -12,15 +10,6 @@ body {
   display: flex;
 }
 
-.spacing {
-  padding: 5px;
-}
-
-.button {
-  width: 100px;
-  height: 30px;
-  margin-top: 20px;
-}
 
 
 
