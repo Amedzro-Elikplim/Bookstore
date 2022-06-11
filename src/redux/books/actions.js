@@ -23,3 +23,11 @@ export const FETCHBOOKS = () => async (dispatch) => {
     console.log(error);
   }
 };
+
+export const ADDBOOK = () => {
+  try {
+    
+  } catch (error) {
+    
+  }
+}
