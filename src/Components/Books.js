@@ -15,7 +15,13 @@ function Books() {
   return (
     <div>
       {data.map((item) => (
-        <Book key={item.item_id} id={item.item_id} title={item.title} author={item.author} />
+        <Book
+          key={item.item_id}
+          id={item.item_id}
+          title={item.title}
+          author={item.author}
+          category={item.category}
+        />
       ))}
       <Form />
     </div>
