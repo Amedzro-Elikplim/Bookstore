@@ -27,4 +27,5 @@
     outline: none;
     background-color: rgb(143, 177, 252);
     padding: 10px 30px;
+    cursor: pointer;
 }
