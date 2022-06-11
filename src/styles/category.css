@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.category-container {
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  flex-direction: column;
+}
+
+.category-button {
+  border: none;
+  outline: none;
+  padding: 10px 50px;
+  cursor: pointer;
+  margin-top: 10px;
+  background-color: rgb(115, 176, 255);
+}
+
+.construction-text {
+  font-size: 60px;
+}

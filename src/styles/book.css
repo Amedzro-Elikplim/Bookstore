@@ -2,3 +2,89 @@
   box-sizing: border-box;
   margin: 0;
 }
+
+.book-container {
+  min-height: 150px;
+  padding: 30px;
+  margin: 10px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid rgb(233, 231, 231);
+  justify-content: space-between;
+}
+
+.category {
+  font-size: 15px;
+  color: gray;
+  font-weight: bold;
+}
+
+.title {
+  margin-top: 5px;
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.author {
+  font-size: smaller;
+  color: rgb(115, 176, 255);
+  margin-top: 2px;
+}
+
+.options {
+  margin-top: 20px;
+  list-style-type: none;
+  gap: 10px;
+}
+
+.options li {
+  cursor: pointer;
+}
+
+.button {
+  border: none;
+  outline: none;
+  background-color: white;
+  font-size: 15px;
+  border-left: 1px solid rgb(199, 199, 199);
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+.current-chapter {
+  border-left: 1px solid rgb(184, 183, 183);
+  width: 30vw;
+  padding-left: 30px;
+}
+
+.current {
+  color: rgb(204, 204, 204);
+}
+
+.chapter {
+  margin-top: 5px;
+}
+
+.update-button {
+  margin-top: 30px;
+  padding: 10px 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: rgb(143, 177, 252);
+  color: white;
+}
+
+.percentage {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.percent {
+  font-size: 40px;
+}
+
+.completed {
+  color: rgb(133, 131, 131);
+}

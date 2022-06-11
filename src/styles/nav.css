@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  padding: 20px;
+  width: 100vw;
+  background-color: white;
+  align-items: center;
+  gap: 50px;
+  border: 1px solid rgb(214, 214, 214);
+}
+
+.logo {
+  font-size: 45px;
+  color: rgb(65, 199, 188);
+  font-weight: bold;
+}
+
+.nav-links {
+  gap: 20px;
+  list-style-type: none;
+}
+
+.no-underline {
+  text-decoration: none;
+}

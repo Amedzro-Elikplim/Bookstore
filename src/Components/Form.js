@@ -2,6 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { ADD, SAVEBOOK } from '../redux/books/actions';
+import '../styles/form.css';
 
 function Form() {
   const dispatch = useDispatch();
@@ -42,15 +43,17 @@ function Form() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form d-flex">
       <input
+        className="input"
         type="text"
-        placeholder="Title"
+        placeholder="Book title..."
         name="title"
         onChange={handleChange}
         value={state.title || ''}
       />
       <input
+        className="input"
         type="text"
         placeholder="Author.."
         name="author"
@@ -58,13 +61,14 @@ function Form() {
         value={state.author || ''}
       />
       <input
+        className="category-input"
         type="text"
         placeholder="Category.."
         name="category"
         onChange={handleChange}
         value={state.category || ''}
       />
-      <button type="submit">ADD</button>
+      <button type="submit" className="add-button">ADD BOOK</button>
     </form>
   );
 }
