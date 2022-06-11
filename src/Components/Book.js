@@ -22,17 +22,32 @@ function Book(props) {
           <p className="title">{title}</p>
           <p className="author">{author}</p>
         </div>
-        <button type="button" className="button" onClick={removeBook}>
-          Remove
-        </button>
+
+        <div>
+          <ul className="d-flex options">
+            <li>
+              <button type="button" className="button">
+                Comments
+              </button>
+            </li>
+            <li>
+              <button type="button" className="button" onClick={removeBook}>
+                Remove
+              </button>
+            </li>
+            <li>
+              <button type="button" className="button">
+                Edit
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <div>
-        second
-      </div>
+      <div>second</div>
 
-      <div>
-        third
+      <div className="current-chapter">
+        <button type="button">Update Progress</button>
       </div>
     </div>
   );
