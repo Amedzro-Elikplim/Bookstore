@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  margin: 0px;
+  margin: 0;
 }
 
 .book-container {
@@ -52,9 +52,9 @@
 }
 
 .current-chapter {
- border-left: 1px solid rgb(184, 183, 183);
- width: 30vw;
- padding-left: 30px;
+  border-left: 1px solid rgb(184, 183, 183);
+  width: 30vw;
+  padding-left: 30px;
 }
 
 .current {
