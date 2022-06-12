@@ -26,6 +26,10 @@ To get a local copy up and running follow these simple example steps.
 - run `npm install`
 - run `npm run start` to start webpack dev server
 
+## Live Demo
+
+[Live Demo Link](https://bookstore-01.netlify.app/)
+
 ## Author
 👤 **Amedzro Elikplim Emmanuel**
 
